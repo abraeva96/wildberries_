@@ -1,0 +1,125 @@
+@import '../../assets/sass/media.scss';
+.item {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(235, 160, 211, 0.726);
+    @include media(1000) {
+        padding: 8px;
+    }
+    &_img {
+        text-align: center;
+        position: relative;
+        img {
+            border-radius: 20px;
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            @include media(1000) {
+                width: 240px;
+                height: 140px;
+            }
+            @include media(800) {
+                width: 230px;
+                height: 130px;
+            }
+            @include media(580) {
+                width: 210px;
+            }
+            @include media(520) {
+                width: 200px;
+                height: 120px;
+            }
+            @include media(490) {
+                width: 190px;
+                height: 120px;
+            }
+        }
+    }
+    &__info {
+        text-align: center;
+        &_title {
+            color: rgb(72, 0, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            height: 50px;
+            @include media(860) {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            @include media(700) {
+                font-size: 15px;
+                margin: 10px 0;
+            }
+            @include media(350) {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+        }
+        &_description {
+            color: #2c2828;
+            text-align: center;
+            height: 80px;
+            font-size: 10px;
+            @include media(700) {
+                height: 80px;
+                margin: 5px 0;
+            }
+        }
+        &_stock {
+            color: #000;
+            @include media(700) {
+                // margin: 5px 0;
+                font-size: 15px;
+            }
+        }
+        &__price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            // color: rgb(87, 129, 170);
+            color: #000;
+            @include media(700) {
+                // margin: 5px 0;
+                font-size: 15px;
+            }
+        }
+        &_price {
+            text-decoration-line: line-through;
+            color: #716a6a;
+        }
+        &_sale {
+            color: rgb(202, 17, 17);
+            font-weight: 500;
+            @include media(700) {
+                // margin: 5px 0;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.btn {
+    border: none;
+    padding: 5px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    font-size: 12px;
+    animation: saleAnimation 1s ease-in-out infinite alternate;
+    background-color: #e50a12;
+    color: #fff;
+    border-radius: 10px;
+}
+
+@keyframes saleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scaley(1.1);
+    }
+}

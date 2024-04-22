@@ -1,0 +1,153 @@
+    @import '../../assets/sass/media.scss';
+    ;
+    .products {
+        margin: 40px auto;
+        width: 700px;
+        padding: 20px;
+        background-color: rgb(234, 224, 233);
+        border-radius: 20px;
+        @include media(1000) {
+            width: 600px;
+        }
+        @include media(650) {
+            width: 500px;
+        }
+        @include media(550) {
+            width: 450px;
+        }
+        @include media(480) {
+            width: 400px;
+        }
+        @include media(450) {
+            width: 380px;
+        }
+        @include media(400) {
+            width: 340px;
+        }
+        @include media(380) {
+            width: 320px;
+        }
+        @include media(350) {
+            width: 300px;
+        }
+        @include media(330) {
+            width: 280px;
+        }
+        @include media(320) {
+            width: 270px;
+        }
+        &_top {
+            text-align: center;
+            img {
+                // position: relative;
+                width: 300px;
+                height: 250px;
+                object-fit: contain;
+                object-position: center;
+                @include media(1000) {
+                    width: 250px;
+                }
+                @include media(500) {
+                    width: 220px;
+                }
+                @include media(400) {
+                    width: 200px;
+                }
+                @include media(380) {
+                    width: 180px;
+                }
+                @include media(380) {
+                    width: 150px;
+                }
+                @include media(350) {
+                    width: 140px;
+                }
+            }
+        }
+        &_bottom {
+            @include media(580) {
+                text-align: center;
+            }
+            &_title {
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 20px;
+                color: rgb(14, 14, 137);
+                @include media(580) {
+                    font-size: 16px;
+                }
+                @include media(500) {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+            }
+            &_discont {
+                top: 0;
+                // position: absolute;
+                text-align: center;
+                margin: 10px 0;
+                color: red;
+            }
+            &_stock {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+            }
+            &_desc {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            &_stok {
+                text-align: center;
+                color: rgb(13, 130, 19);
+            }
+            &_price {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 18px;
+                text-decoration-line: line-through;
+                font-weight: 700;
+                color: rgb(68, 71, 68);
+            }
+            &_sale {
+                text-align: center;
+                color: red;
+                font-weight: 600;
+            }
+        }
+        &_btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            &_basket {
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                color: #fff;
+                padding: 15px;
+                background-color: rgb(189, 94, 141);
+                &:active {
+                    transform: scale(0.95);
+                }
+                @include media(500) {
+                    font-size: 12px;
+                    padding: 10px;
+                }
+            }
+            &_icon {
+                color: rgb(189, 94, 141);
+                font-size: 25px;
+            }
+        }
+    }
+    
+    .isError {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .back {
+        margin-top: 20px;
+        font-size: 40px;
+    }

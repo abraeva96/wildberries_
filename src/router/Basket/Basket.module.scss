@@ -1,0 +1,102 @@
+@import '../../assets/sass/media.scss';
+.basket {
+    margin-top: 100px;
+    gap: 40px;
+    &_left {
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        &_title {
+            @include media(850) {
+                width: 180px;
+                font-size: 14px;
+            }
+            @include media(650) {
+                text-align: center;
+            }
+        }
+        @include media(650) {
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        &_btn {
+            display: flex;
+            gap: 10px;
+            @include media(650) {
+                margin: 10px 0;
+            }
+            &_min {
+                background-color: #978e8e66;
+                border-radius: 5px;
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                border: none;
+                @include media(850) {
+                    width: 25px;
+                    height: 25px;
+                    padding: 3px;
+                }
+            }
+        }
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            @include media(850) {
+                width: 200px;
+                height: 200px;
+            }
+            @include media(650) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    &_emptu {
+        text-align: center;
+        &_title {
+            // font-family: 'Mulish';
+            font-size: 20px;
+            margin: 20px;
+        }
+        &_txt {
+            // font-family: 'Mulish';
+            margin: 20px 0;
+            color: #746c6c;
+        }
+        &_btn {
+            // font-family: 'Mulish';
+            color: #fff;
+            border-radius: 20px;
+            border: none;
+            padding: 20px;
+            background-color: #6043e1c5;
+            cursor: pointer;
+        }
+    }
+    &_del {
+        cursor: pointer;
+        color: #2a2727;
+        right: 20px;
+        bottom: 20px;
+        position: absolute;
+        font-size: 30px;
+        @include media(550) {
+            font-size: 25px;
+        }
+        @include media(450) {
+            font-size: 20px;
+        }
+    }
+}
+
+body {
+    background-color: #c0c2c533;
+}

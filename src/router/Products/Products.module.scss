@@ -1,0 +1,117 @@
+@import '../../assets/sass/media.scss';
+.products {
+    &__box {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        gap: 30px;
+        @include media(1250) {
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+        }
+        @include media(850) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include media(550) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &_pagination {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        @include media(550) {
+            margin: 20px 0;
+            gap: 5px;
+        }
+        @include media(400) {
+            margin: 20px 0;
+            gap: 3px;
+        }
+         :disabled {
+            color: rgb(217, 218, 231);
+            background-color: rgb(185, 185, 179);
+        }
+        &_btn {
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: rgb(185, 185, 179);
+            @include media(550) {
+                padding: 8px;
+                font-size: 14px;
+            }
+            @include media(400) {
+                padding: 6px;
+                font-size: 12px;
+            }
+        }
+        &_number {
+            width: 40px;
+            text-align: center;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: rgb(185, 185, 179);
+            @include media(550) {
+                width: 30px;
+                padding: 6px;
+            }
+            @include media(400) {
+                width: 25px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.div {
+    margin: 50px 0;
+    display: flex;
+    gap: 50px;
+    @include media(500) {
+        margin: 30px 0;
+        gap: 30px;
+    }
+    &_select {
+        background-color: rgba(206, 168, 201, 0.662);
+        padding: 10px 15px;
+        border: 2px solid rgb(201, 41, 210);
+        border-radius: 10px;
+        outline: none;
+        @include media(500) {
+            padding: 10px 10px;
+        }
+    }
+    &_search {
+        display: flex;
+        gap: 10px;
+        &_inp {
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid rgba(255, 17, 219, 0.662);
+            width: 200px;
+            padding: 10px;
+            @include media(500) {
+                width: 150px;
+            }
+        }
+        &_btn {
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid rgba(255, 17, 219, 0.662);
+            width: 80px;
+            padding: 10px;
+        }
+    }
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+}
